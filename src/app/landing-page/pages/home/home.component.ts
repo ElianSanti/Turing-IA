@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { catchError, map, Observable, of } from 'rxjs';
 import { ClientStorie } from '../../interfaces/clientHistory.interface';
 
 @Component({
@@ -30,6 +32,8 @@ export class HomeComponent implements OnInit {
 
   scrollValue = 200;
   
+  apiLoaded!:Observable<boolean>;
+
   @HostListener('window:scroll')
   checkScroll(){
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -46,7 +50,13 @@ export class HomeComponent implements OnInit {
 
   }
 
-  constructor() { }
+  constructor(httpClient:HttpClient) {
+      this.apiLoaded = httpClient.jsonp('https://maps.googleapis.com/maps/api/js?key=AIzaSyA_8tzXJn2KpOXsHvHnsfGOGC9sw64bJ4M','callback')
+        .pipe(
+          map( ()=> true),
+          catchError( () => of(false))
+        )
+   }
 
   ngOnInit(): void {
   }
