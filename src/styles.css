@@ -1,1 +1,174 @@
 /* You can add global styles to this file, and also import other style files */
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+:root{
+    --video1920p: 70vh;
+    --logofont: 'Poppins', sans-serif;
+    --latoFont: 'Lato', sans-serif;
+}
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Utilities */
+
+.d-flex{
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}
+
+.relative{
+    position: relative;
+}
+
+.text-white{
+    color: white;
+}
+
+.noscroll{
+    overflow: hidden;
+}
+
+.title{
+    font-family: var(--logofont);
+    font-weight: 700;
+}
+
+.subTitle{
+    font-family: var(--logofont);
+    font-weight: 500;
+}
+.text{
+    font-family: var(--latoFont);
+    font-weight: 400;
+}
+.mg-t{
+    margin-top: 2rem;
+}
+.mg-b{
+    margin-bottom: 2rem;
+}
+.mg-y-2{
+    margin: 2rem 0;
+}
+
+.mg-y-3{
+    margin: 3rem 0;
+}
+
+.mg-y-5{
+    margin: 5rem 0;
+}
+
+.p-t{
+    padding-top: 2rem;
+}
+.p-b{
+    padding-bottom: 2rem;
+}
+.py-2{
+    padding: 2rem 0;
+}
+
+.py-5{
+    padding: 5rem 0;
+}
+
+.break-long-words {
+    white-space: normal;
+    word-wrap: break-word;
+}
+.remove-bg{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    -webkit-filter: brightness(1.1);
+}
+
+/* Containers */
+.container-footer{
+    padding-left: 12vw;
+    padding-right: 12vw;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width:768px){
+    .container-footer{
+        max-width: 720px;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+}
+
+@media (min-width:992px){
+    .container-footer{
+        max-width: 960px;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+}
+
+@media (min-width:1200px){
+    .container-footer{
+        max-width: 1140px;
+    }
+}
+
+@media (min-width:1400px){
+    .container-footer{
+        max-width: 92vw;
+    }
+}
+
+
+.container,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}

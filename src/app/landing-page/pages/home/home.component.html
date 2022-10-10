@@ -1,0 +1,129 @@
+<!-- !Navbar -->
+<app-navbar [isShow]="isShow" [scrollValue]="scrollValue"></app-navbar>
+
+
+<!-- Section overlay -->
+<section>
+
+    <div class="overlay"></div>
+    <div>
+        <video id="video" onloadedmetadata="this.muted=true" autoplay loop src="https://drive.google.com/uc?export=download&id=1J_Y4xY_FGItfFan4xu0GBo1w73WYqxFT">
+        </video>
+    </div>
+
+    <div class="absolute">
+        <h1 class="h1_overlay">Bienvenido <p class="p_overlay">Hacemos los <br> datos fáciles de usar</p></h1>
+    </div>
+
+</section>
+
+<!-- Main -->
+
+<div class="container mg-y-5">
+
+    <div class="mg-y">
+        <h2><a href="#" class="subTitle">{{'Qué realizamos'|uppercase}}</a></h2>
+        
+        <h3 class="title mg-y">Contribuimos con su empresa para mejorar la toma de decisiones a través de sus datos.</h3>
+        
+        <a href="" class="btn mg-t">{{'Más información'|uppercase}}</a>
+
+    </div>
+
+
+    <!-- Carousel -- client stories -->
+    <div class="mg-y-3">
+        <h2 class="subTitle">{{'Historias de clientes'|uppercase}}</h2>
+
+        <ngx-glide [perView]="3" [type]="'carousel'" [gap]="10" [breakpoints]="{'768':{perView:1},'992':{perView:2}}" [showArrows]="false" [autoplay]="2000">
+
+            <ng-container *ngFor="let client of clients">
+                
+                <div class="carousel-content">
+
+                    <div class="card">    
+                        <div class="card-header">
+                            <span class="text">{{client.nameClient}}</span>
+                            <img src="{{client.img}}" alt="">
+                        </div>
+                        
+                        <div class="card-body">
+                        
+                            <p class="break-long-words">{{client.history}}</p>
+                        
+                        </div>
+                    </div>
+                </div>
+
+            </ng-container>            
+        
+        </ngx-glide>
+    </div>
+</div>
+
+<article class="bg-technologies">
+    <div class="container py-5">
+        <h2 class="subTitle">{{'tecnologias que utilizamos'|uppercase}}</h2>
+        <div class="technologies d-flex">
+
+            <div class="technology-card">
+                <a href="#">
+                    <img src="https://www.turing-ia.com/assets/img/tecnoly-tableau.png" alt="">
+                </a>
+            </div>
+            <div class="technology-card">
+                <a href="#">
+                    <img class="remove-bg" src="https://www.turing-ia.com/assets/img/salesforce (2).jpg" alt="">
+                </a>
+            </div>
+            <div class="technology-card">
+                <a href="#">
+                    <img src="https://www.turing-ia.com/assets/img/pmi2.png" alt="logo">
+                </a>
+            </div>
+            <div class="technology-card">
+                <a href="#">
+                    <img src="https://www.turing-ia.com/assets/img/scrum.png" alt="logo">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</article>
+
+
+<div class="mg-y-3 ov-f">
+    <div class="container">
+        <div class="container-third-content">
+
+            <div class="relative">
+                <div class="video-content">
+                    <video onloadedmetadata="this.muted=true" autoplay loop src="https://drive.google.com/uc?export=download&id=1NxB--0x8ucRcjjFuM-nAiVSVzO5di3d7"></video>
+                </div>
+            </div>
+            
+            <div class="container text-content">
+                <h2 class="subTitle">LA MANERA IDEAL PARA MANEJAR TUS DATOS</h2>
+                <p class="information">Somos el socio estratégico que necesitas para potenciar los datos de tu organización.
+                    Contamos con mas de 15 años de experiencia brindando soluciones innovadoras, adaptadas
+                    a las necesidades de nuestros clientes, en más de 10 industrias y diferentes áreas funcionales.</p>
+            </div>
+
+            <div class="relative">
+                <img class="img-content" src="https://www.turing-ia.com/assets/img/cer-pmi.jpg" alt="...">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- WHAT WE OFFER -->
+
+
+<!-- Contact us -->
+
+
+<!-- !Footer -->
+<app-footer></app-footer>

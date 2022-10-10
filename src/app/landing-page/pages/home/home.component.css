@@ -1,0 +1,250 @@
+section{
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+#video{
+    width: 100%;
+    height: var(--video1920p);
+    overflow: hidden;
+    object-fit: cover;
+}
+
+h1, p{
+    font-family: var(--latoFont);
+    font-weight: 700;
+}
+
+h2,a{
+    text-decoration: none;
+}
+
+/* Header content */
+.absolute{
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 25%;
+    left: 15%;
+    align-items: center;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background:rgba(0,0,0,0.4);
+}
+
+.h1_overlay{
+    color: #fff;
+    font-size: 4.5vw;
+    line-height: 0.2;
+}
+.p_overlay{
+    font-size: 2.5vw;
+    line-height: 1;
+    
+}
+
+.subTitle{
+    color: #0c62fb;
+    font-size: 1.2rem;
+}
+.title{
+    font-size: 2.5rem;
+}
+
+@media (max-width:992px){
+    .title{
+        font-size: 1.5rem;
+    }
+}
+
+/* button */
+.btn {
+    position: relative;
+    background: none;
+    border: solid 1px #0c62fb;
+    transition: linear 250ms;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: var(--latoFont);
+    font-weight: 700;
+    color: #0c62fb;
+
+  }
+  
+.btn:is(:hover,:focus) {
+    background-color: #0c62fb;
+    color: white;
+}
+  
+.btn:is(:hover, :focus)::after {
+    transform: scale(1);
+}
+
+/* Card content - Carousel */
+.carousel-content{
+    position: relative;
+    height: 33rem;
+}
+
+.card{
+    position: relative;
+    width: 100%;
+}
+
+.card-header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card-header span{
+    font-weight: 700;
+}
+
+.card-body{
+    position: absolute;
+    right: 0;
+    bottom: -10%;
+    width: 20rem;
+    height: auto;
+    background-color: #f3f4f5;
+}
+
+.card-body p{
+    padding: 0.5rem;
+}
+
+.card-header img{
+    object-fit: cover;
+    height: calc(100% - 6rem);
+    width: 100%;
+}
+
+
+@media (min-width:768px){
+    .carousel-content{
+        height: 33rem;
+        margin-left: 10px;
+    }
+}
+
+/* Tecnologies */
+.technologies{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.technology-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-technologies{
+    background-color: #f2f3f4;
+}
+
+.technology-card a img{
+    filter: grayscale(100%);
+    width: 30vw;
+    -webkit-filter: grayscale(100%);
+    transition: filter .3s;
+    -webkit-transition: filter .3s;
+    -moz-transition: filter .3s;
+    -ms-transition: filter .3s;
+    -o-transition: filter .3s;
+}
+
+.technology-card a:hover > img{
+    filter: none;
+    -webkit-filter: none;
+}
+
+@media screen and (min-width:768px){
+    .technology-card a img{
+        width: 15vw;
+    }
+}
+@media (max-width:768px){
+    .technologies{
+        flex-direction: column;
+    }
+}
+
+
+/* Who we are */
+.ov-f{
+    overflow-x: clip;
+}
+.container-third-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    justify-content: center;
+}
+
+.text-content{
+    text-align: center;
+}
+
+.information{
+    text-align: left;
+    font-size: 2rem;
+}
+
+@media (max-width:992px){
+    .information{
+        font-size: 1rem;
+    }
+}
+
+.video-content{
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 30vw;
+    height: 20vh;
+    -webkit-clip-path: polygon(20% 20%, 20% 0%, 75% 0%, 100% 50%, 75% 100%, 20% 100%);
+    clip-path: polygon(20% 20%, 20% 0%, 75% 0%, 100% 50%, 75% 100%, 20% 100%);
+}
+
+.video-content video{
+    height: 100%;
+    transform: translateX(-30%);
+}
+
+
+
+.img-content{
+    width: 40vmin;
+    height: 25vmin;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    border: 3px solid transparent;
+    transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+}
+
+
+@media (min-width:1200px){
+    .img-content{
+        width: 37rem;
+        height: 19rem;
+    }
+    .video-content{
+        width: 24rem;
+        height: 20rem;
+    }
+
+}

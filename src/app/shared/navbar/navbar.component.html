@@ -1,0 +1,84 @@
+<header [ngStyle]="{'top': showNavbar()}">
+    
+    <!-- Navbar -->
+    <nav class="d-flex navbar" [class]="changeNavbar()">
+        
+        <!-- !Nav-toggle -->
+        <input type="checkbox" id="nav-toggle" [(ngModel)]="checked" name="checkbox" (ngModelChange)="noScroll()">
+        
+        <!-- Logo -->
+        <div class="logo">
+            <a href="#" class="text-decoration">Turing IA</a>
+        </div>
+        
+        
+        <div class="menu-overlay">
+            
+            <!-- Links navbar -->
+            <ul class="links">
+                <li >
+                    <a href="#" class="text-decoration b-border">Inicio</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration b-border">Nosotros</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration">Servicios</a>
+                    <!-- Dropdown -->
+                    <ul>
+                        <li>
+                            <a href="#" class="text-decoration">Business Analyst</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration">Workshop</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration">Capacitación</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration">Venta de software</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration">Hardware</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration">Desarrollo de software</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration">Balanced Scorecard</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration b-border">Tableau</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration b-border">Portal</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration b-border">Blog</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration b-border">Contacto</a>
+                </li>
+            </ul>
+            
+        </div>
+        
+        <!-- !Nav-toggle (Icon)-->
+        <label for="nav-toggle" class="icon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>    
+        </label>
+        
+        
+    </nav>
+    
+    
+    <!-- Contact -->
+    <div>
+
+    </div>
+
+</header>
