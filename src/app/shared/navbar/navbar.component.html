@@ -20,12 +20,12 @@
                     <a href="#" class="text-decoration b-border">Inicio</a>
                 </li>
                 <li>
-                    <a href="#" class="text-decoration b-border">Nosotros</a>
+                    <a [routerLink]="['/about']" routerLinkActive="router-link-active"  class="text-decoration b-border">Nosotros</a>
                 </li>
                 <li>
-                    <a href="#" class="text-decoration">Servicios</a>
+                    <a [routerLink]="['/services']" routerLinkActive="router-link-active"  class="text-decoration b-border">Servicios</a>
                     <!-- Dropdown -->
-                    <ul>
+                    <!-- <ul>
                         <li>
                             <a href="#" class="text-decoration">Business Analyst</a>
                         </li>
@@ -47,16 +47,38 @@
                         <li>
                             <a href="#" class="text-decoration">Balanced Scorecard</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
+
                 <li>
-                    <a href="#" class="text-decoration b-border">Tableau</a>
+                    <!-- dropdown -->
+                    <a [routerLink]="['/tableau']" routerLinkActive="router-link-active"  class="text-decoration b-border">Tableau</a>
+                    <ul>
+                        <li>
+                            <a class="text-decoration" href="#">Desktop</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration" href="#">Prep</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration" href="#">Cloud</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration" href="#">Server</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration" href="#">Server Management</a>
+                        </li>
+                        <li>
+                            <a class="text-decoration" href="#">Data Management</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#" class="text-decoration b-border">Portal</a>
                 </li>
                 <li>
-                    <a href="#" class="text-decoration b-border">Blog</a>
+                    <a [routerLink]="['/blog']" routerLinkActive="router-link-active"  class="text-decoration b-border">Blog</a>
                 </li>
                 <li>
                     <a href="#" class="text-decoration b-border">Contacto</a>

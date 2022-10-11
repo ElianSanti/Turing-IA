@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -6,6 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+
+  isShow!:boolean;
+
+  scrollValue = 200;
+
+  @HostListener('window:scroll')
+  checkScroll(){
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    
+    console.log(scrollPosition)
+
+    if (scrollPosition >= this.scrollValue) {
+      this.scrollValue = scrollPosition;
+      this.isShow = true;
+    } else {
+      this.scrollValue = scrollPosition;
+      this.isShow = false;
+    }
+
+  }
 
   constructor() { }
 

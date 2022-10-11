@@ -27,12 +27,13 @@ export class HomeComponent implements OnInit {
       history:'Grupo Petersen crea una cultura de datos con Tableau'
     }
   ]
+  
+  apiLoaded!:Observable<boolean>;
 
   isShow!:boolean;
 
   scrollValue = 200;
   
-  apiLoaded!:Observable<boolean>;
 
   @HostListener('window:scroll')
   checkScroll(){

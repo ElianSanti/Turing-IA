@@ -75,13 +75,17 @@ nav{
     -o-transition: border-bottom-color .3s;
 }
 
-.navbar ul li > ul{
-    border-bottom: 2px solid transparent;
+.navbar ul li ul li > a{
+    color: #fff;
 }
 
-.navbar ul li ul > li:hover{
-    border-bottom: 2px solid white;
-    transition: border-bottom-color .3s;
+.navbar ul li ul li:hover > a{
+    color: #0c62fb;
+    transition: color .3s;
+    -webkit-transition: color .3s;
+    -moz-transition: color .3s;
+    -ms-transition: color .3s;
+    -o-transition: color .3s;
 }
 /* --------------------------------------------- */
 
@@ -95,7 +99,7 @@ nav{
     flex-direction: column;
     left: 0;
     top: 100%;
-    width: 17rem;
+    width: 12rem;
     padding: 0;
 }
 
@@ -106,7 +110,7 @@ nav{
 @media (min-width:1025px){
     .navbar ul li:hover > ul{
         position: absolute;
-        display: inline-block;
+        display: flex;
         background:rgba(0,0,0,0.7);
         border-radius: 4px;
         -webkit-border-radius: 4px;
