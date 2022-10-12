@@ -1,6 +1,6 @@
 import { style } from '@angular/animations';
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, Input, OnDestroy, Renderer2 } from '@angular/core';
+import { Component, Inject, Input, OnDestroy, Renderer2, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -13,6 +13,7 @@ export class NavbarComponent implements OnDestroy {
 
   @Input('isShow') isShow!:boolean;
   @Input('scrollValue') scrollValue!:number;
+  @Input('contactUs') contactUs!:HTMLElement;
 
   constructor(  @Inject(DOCUMENT) private document: Document, 
                 private renderer: Renderer2 ) { }
@@ -30,14 +31,18 @@ export class NavbarComponent implements OnDestroy {
   }
   
   
-  noScroll(){
-    if (this.checked) {
-      this.renderer.addClass(this.document.body, 'noscroll');
-    }else{
-      this.renderer.removeClass(this.document.body, 'noscroll');
-    }
-  }
+  // noScroll(){
+  //   if (this.checked) {
+  //     this.renderer.addClass(this.document.body, 'noscroll');
+  //   }else{
+  //     this.renderer.removeClass(this.document.body, 'noscroll');
+  //   }
+  // }
   
+  scrollToContact(){
+    this.contactUs.scrollIntoView({behavior:'smooth'})
+  }
+
 
 }
 

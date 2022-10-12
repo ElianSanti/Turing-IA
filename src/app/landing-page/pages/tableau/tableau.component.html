@@ -1,1 +1,73 @@
-<p>tableau works!</p>
+<app-navbar></app-navbar>
+<app-header></app-header>
+
+<div class="bg py-5">
+    <div class="container text-center">
+        <div class="mg-x-5 text-white">
+            <h1 class="title mg-0">¿Qué es Tableau?</h1>
+            <h2 class="subTitle">Soluciones de negocio basadas en análisis de datos inteligentes</h2>
+            <h4 class="text container">Es un software capaz de brindarle a tu empresa panoramas completos de análisis de datos.
+                Facilita la toma de decisiones basada en información de confianza.
+                Su uso es comprensible para todas las áreas dentro de la empresa.</h4>
+        </div>    
+    </div>
+</div>
+
+<main class="container text-center">
+    
+    <div class="mg-x-5">
+        <h1 class="title">Conectores de datos nativos de Tableau</h1>
+        <h2 class="subTitle text-blue">Ofrece a los clientes la mayor variedad de opciones para implementar y conectar los datos de manera segura.</h2>
+        <h3 class="text mg-x-5">Conéctese a todos sus datos, sin importar dónde estén ubicados. Tableau ofrece conectores nativos desarrollados y optimizados para numerosas bases de datos y archivos, desde hojas de cálculo y archivos PDF hasta big data, cubos y bases de datos relacionales, ya sea en las instalaciones físicas o en la nube. Estos también incluyen los datos de aplicaciones o en la web.</h3>
+    </div>
+    <div class="mg-y-3">
+
+        <ngx-glide [perView]="4" [type]="'carousel'" [gap]="10" [showBullets]="false" [breakpoints]="{'768':{perView:2},'1200':{perView:3}}" [showArrows]="false" [autoplay]="1500">
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/excel.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/sqlmicrsoft2x.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/postgre.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/snowflake.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/big_query.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/amazon_athena.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/sheets.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/sap_hana.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/hive.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/vertica.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/amazon_athena.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/presto.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/salesforce.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/netezza.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/splunk.png" alt="logo"></div>
+            <div class="carousel-img"><img src="https://www.turing-ia.com/assets/img/conectores/ga.png" alt="logo"></div>
+        </ngx-glide>
+    </div>
+
+    <div class="mg-y-5">
+        <div class="text-center mg-y-2">
+            <h1 class="title">TABLEAU PRODUCTS</h1>
+            <h2 class="subTitle text-blue">Tenemos una gran gama de soluciones para llevara al máximo nivel tu compañia</h2>
+        </div>    
+
+        <div class="cards-container">
+            <ng-container *ngFor="let product of tableauProducts">
+                <a [routerLink]="[product.url]" class="card text-black">
+                    <img src="{{product.img}}" alt="">
+                    
+                    <div class="card-title">
+                        <h2 class="subTitle">{{product.title}}</h2>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h5 class="text">{{product.description}}</h5>
+                    </div>
+                </a>
+            </ng-container>
+        </div>
+    </div>
+
+</main>
+
+
+
+
+<app-footer></app-footer>

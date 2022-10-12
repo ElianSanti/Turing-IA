@@ -4,11 +4,6 @@ h1, p{
     font-weight: 700;
 }
 
-h2,a{
-    text-decoration: none;
-}
-
-
 /* Utilities */
 .subTitle{
     color: #0c62fb;
@@ -25,63 +20,7 @@ h2,a{
 }
 
 /* !buttons */
-.btn {
-    position: relative;
-    background: none;
-    border: solid 1px #0c62fb;
-    transition: linear 250ms;
-    cursor: pointer;
-    width: 150px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    font-family: var(--latoFont);
-    font-weight: 700;
-    color: #0c62fb;
-}
-  
-.btn:is(:hover,:focus) {
-    background-color: #0c62fb;
-    color: white;
-}
-  
-/* .btn:is(:hover, :focus)::after {
-    transform: scale(1);
-} */
 
-
-
-.btn3{
-    display: inline-block;
-    margin-bottom: 15px;
-    padding: 13px 30px;
-    text-align: center;
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: #fff;
-    background: #0c62fb;
-    cursor: pointer;
-    transition: ease-out 0.5s;
-    border: 1px solid #0c62fb;
-    border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #0c62fb;
-}
-  
-.btn3:hover {
-    color: #0c62fb;
-    box-shadow: inset 0 -100px 0 0 #fff;
-}
-  
-.btn3:active {
-    transform: scale(0.9);
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    -o-transform: scale(0.9);
-}
 
 /* !Card content - Carousel */
 

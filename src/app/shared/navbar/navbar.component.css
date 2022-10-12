@@ -23,6 +23,14 @@ nav{
     -o-transition: all 0.3s;
 }
 
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
 .navbarScroll{
     background-color: rgba(0,0,0,0.7);
     margin: 0;
@@ -230,7 +238,7 @@ nav .icon .line{
     /* Menu responsive (Overlay fullscreen)*/
     nav .menu-overlay{
         width: 100vw;
-        height: 100vh;
+        height: 120vh; /*100vh*/
         position: absolute;
         top: 0;
         left: 0;
@@ -258,7 +266,7 @@ nav .icon .line{
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);
-    }
+    } 
 }
 
 

@@ -1,5 +1,5 @@
 <!-- !Navbar -->
-<app-navbar [isShow]="isShow" [scrollValue]="scrollValue"></app-navbar>
+<app-navbar [isShow]="isShow" [scrollValue]="scrollValue" [contactUs]="contactUs"></app-navbar>
 
 
 <!-- !Section overlay -->
@@ -129,7 +129,7 @@
 </div>
 
 <!-- !Contact us -->
-<div class="container mg-y-5">
+<div class="container mg-y-5" #contactUs>
 
     <h2 class="subTitle mg-b">{{'Contáctanos'|uppercase}}</h2>
 
@@ -139,16 +139,16 @@
             <a href="https://calendly.com/turing-ia-web/web-client" target="_blank" class="btn3 text">Ponte en contacto con un especialista</a>
 
             <div>
-                <form autocomplete="off" class="form">
+                <form autocomplete="off" class="form" autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="sendForm()">
                     <h2 class=" text">Ó Envianos tus datos</h2>
 
                     <div class="form-content">
-                        <input class="input" type="text" placeholder="Tu nombre">
-                        <input class="input" type="email" placeholder="Tu correo">
-                        <input class="input" type="tel" placeholder="Número de Teléfono">
-                        <input class="input" type="text" placeholder="Empresa (Opcional)">
-                        <textarea class="input" placeholder="Escribe tu mensaje aquí"></textarea>
-                        <button class="btn">Enviar</button>
+                        <input formControlName="name" class="input" type="text" placeholder="Tu nombre">
+                        <input formControlName="email" class="input" type="email" placeholder="Tu correo">
+                        <input formControlName="telNumber" class="input" type="tel" placeholder="Número de Teléfono">
+                        <input formControlName="company" class="input" type="text" placeholder="Empresa (Opcional)">
+                        <textarea formControlName="msg" class="input" placeholder="Escribe tu mensaje aquí"></textarea>
+                        <button type="submit" class="btn">Enviar</button>
                     </div>
                     
                 </form>
@@ -158,7 +158,10 @@
 
         <div class="col1" *ngIf="apiLoaded|async">
             <h2 class="subTitle">Ubicación</h2>
-            <google-map width="600px" height="425px"></google-map>
+            <google-map [width]="mapWidth" height="425px" [center]="center">
+                <map-marker (mapClick)="openInfoWindow(marker)" #marker="mapMarker" [position]="markerPosition"></map-marker>
+                <map-info-window>Turing - Inteligencia Artificial</map-info-window>
+            </google-map>
         </div>
 
     </div>

@@ -4,7 +4,7 @@
     <nav class="d-flex navbar" [class]="changeNavbar()">
         
         <!-- !Nav-toggle -->
-        <input type="checkbox" id="nav-toggle" [(ngModel)]="checked" name="checkbox" (ngModelChange)="noScroll()">
+        <input type="checkbox" id="nav-toggle">  <!-- [(ngModel)]="checked" name="checkbox" (ngModelChange)="noScroll()"-->
         
         <!-- Logo -->
         <div class="logo">
@@ -55,22 +55,22 @@
                     <a [routerLink]="['/tableau']" routerLinkActive="router-link-active"  class="text-decoration b-border">Tableau</a>
                     <ul>
                         <li>
-                            <a class="text-decoration" href="#">Desktop</a>
+                            <a class="text-decoration" [routerLink]="['/t-desktop']" >Desktop</a>
                         </li>
                         <li>
-                            <a class="text-decoration" href="#">Prep</a>
+                            <a class="text-decoration" [routerLink]="['/t-prep']">Prep</a>
                         </li>
                         <li>
-                            <a class="text-decoration" href="#">Cloud</a>
+                            <a class="text-decoration" [routerLink]="['/t-cloud']">Cloud</a>
                         </li>
                         <li>
-                            <a class="text-decoration" href="#">Server</a>
+                            <a class="text-decoration" [routerLink]="['/t-server']">Server</a>
                         </li>
                         <li>
-                            <a class="text-decoration" href="#">Server Management</a>
+                            <a class="text-decoration" [routerLink]="['/t-server-management']">Server Management</a>
                         </li>
                         <li>
-                            <a class="text-decoration" href="#">Data Management</a>
+                            <a class="text-decoration" [routerLink]="['/t-data-management']">Data Management</a>
                         </li>
                     </ul>
                 </li>
@@ -81,7 +81,7 @@
                     <a [routerLink]="['/blog']" routerLinkActive="router-link-active"  class="text-decoration b-border">Blog</a>
                 </li>
                 <li>
-                    <a href="#" class="text-decoration b-border">Contacto</a>
+                    <button (click)="scrollToContact()"  class="text-decoration b-border">Contacto</button>
                 </li>
             </ul>
             

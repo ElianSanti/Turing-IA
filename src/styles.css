@@ -17,6 +17,16 @@ body{
     padding: 0;
 }
 
+hr{
+    background-color: #f3f4f5;
+    border: 1px solid #f3f4f5;
+    color: #f3f4f5;
+    height: 2px;
+}
+
+h2,a{
+    text-decoration: none;
+}
 /* Utilities */
 
 .d-flex{
@@ -33,6 +43,14 @@ body{
 
 .text-white{
     color: white;
+}
+
+.text-blue{
+    color: #0c62fb;
+}
+
+.text-black{
+    color: black;
 }
 
 .noscroll{
@@ -97,6 +115,22 @@ body{
 
 .mg-y-5{
     margin: 5rem 0;
+}
+
+.mg-x-1{
+    margin: 0 1rem;
+}
+
+.mg-x-2{
+    margin: 0 2rem;
+}
+
+.mg-x-3{
+    margin: 0 3rem;
+}
+
+.mg-x-5{
+    margin: 0 5rem;
 }
 
 .p-t{
@@ -224,6 +258,37 @@ body{
 /* Global styles */
 
 /* Buttons */
+
+.btn {
+    position: relative;
+    background: none;
+    border: solid 1px #0c62fb;
+    transition: linear 250ms;
+    cursor: pointer;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: var(--latoFont);
+    font-weight: 700;
+    color: #0c62fb;
+}
+  
+.btn:is(:hover,:focus) {
+    background-color: #0c62fb;
+    color: white;
+}
+
+.btn3:active {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
+
 .btn2{
     position: relative;
     background: #0c64fb8a;
@@ -252,3 +317,26 @@ body{
 .btn2:hover{
     background-color: #0c62fb;
 }
+
+.btn3{
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 13px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+    background: #0c62fb;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 1px solid #0c62fb;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #0c62fb;
+}
+  
+.btn3:hover {
+    color: #0c62fb;
+    box-shadow: inset 0 -100px 0 0 #fff;
+}
+  
